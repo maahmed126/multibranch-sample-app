@@ -3,7 +3,8 @@ pipeline {
   triggers {
         upstream(upstreamProjects: 'pipeline-triggers-upstream-job1', 			
         threshold: hudson.model.Result.SUCCESS)//UNSTABLE, FAILURE, NOT_BUILT, ABORTED
-    }			
+    }		
+    	
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
